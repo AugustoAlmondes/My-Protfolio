@@ -7,7 +7,15 @@
 @theme {
     --color-new-pink: #DD5CC5;
     --color-new-green: #65EE58;
+    --color-background: #1C2535;
+    --color-background-bright: #2f3e57;
+
+    --color-line-number: #3B4556;
 }
+
+/* :root{
+
+} */
 
 .typing-effect {
     overflow: hidden;
