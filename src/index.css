@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+* {
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+@theme {
+    --color-new-pink: #DD5CC5;
+    --color-new-green: #65EE58;
+}
+
+.typing-effect {
+    overflow: hidden;
+    border-right: 2px solid #fff;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.typing-effect-2 {
+    overflow: hidden;
+    border-right: 2px solid #fff;
+    white-space: nowrap;
+    animation: typing 4s steps(40, end) 3.5s forwards, blink-caret 0.75s step-end infinite;
+    opacity: 0;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #fff
+    }
+}
