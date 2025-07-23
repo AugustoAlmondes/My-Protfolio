@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { RiFileList2Fill } from "react-icons/ri";
 import { TbWorld } from "react-icons/tb";
-import { useWidth } from "../context/useWidth/useWidth";
 
 export default function About() {
 
     const [displayText, setDisplayedText] = useState(1);
-    const { width } = useWidth();
     const styleButton = `text-white py-1 text-sm rounded-t-md w-30 cursor-pointer flex items-center justify-center gap-1 transition-all duration-100`
 
     return (
@@ -17,17 +15,17 @@ export default function About() {
             `}>
                 <div className={` h-[10%] flex gap-2`}>
                     <button
-                        className={`${styleButton} ${displayText === 1 ? "bg-background" : "bg-background/30 hover:bg-background-bright"}`}
+                        className={`${styleButton} ${displayText === 1 ? "bg-background" : "bg-background/30 text-white/50 hover:bg-background-bright"}`}
                         onClick={() => setDisplayedText(1)}
                     >
-                        <RiFileList2Fill />
+                        {displayText === 1 ? <RiFileList2Fill color="#3F6AC7" /> : <RiFileList2Fill />}
                         Resumo
                     </button>
                     <button
-                        className={`${styleButton} ${displayText === 0 ? "bg-background" : "bg-background/30 hover:bg-background-bright"}`}
+                        className={`${styleButton} ${displayText === 0 ? "bg-background" : "bg-background/30 text-white/50 hover:bg-background-bright"}`}
                         onClick={() => setDisplayedText(0)}
                     >
-                        <TbWorld />
+                        {displayText === 0 ? <TbWorld color="#3F6AC7" /> : <TbWorld />}
                         Redes
                     </button>
                 </div>
@@ -40,6 +38,10 @@ export default function About() {
                             <li>3</li>
                             <li>4</li>
                             <li>5</li>
+                            {
+                                displayText === 0 &&
+                                <li>6</li>
+                            }
                         </ul>
                     </div>
                     {
@@ -59,9 +61,47 @@ export default function About() {
                             </p>
                         </div>
                     }
+                    {
+                        displayText === 0 &&
+
+                        <div className={`text-white px-5 py-2 flex flex-col text-justify justify-center`}>
+                            <p className={`text-new-pink text-start`}>
+                                import
+                                <span className={`text-[#F2604D]`}>{' * '}</span>
+                                from
+                                <span className={`text-new-green`}>{" 'redes'"}</span>
+                            </p>
+                            <p>
+                                <span className={`text-new-pink`}>{'<ul> '}</span>
+                                <p>
+                                    <span className={`text-new-pink`}>{'<li> '} </span>
+                                    <a href="https://www.linkedin.com/in/augusto-almondes/" target="_blank" className={`hover:text-new-green transition-all duration-200`}>
+                                        Linkedin
+                                    </a>
+                                    <span className={`text-new-pink`}>{' </li>'}</span>
+                                </p>
+                                <p>
+                                    <span className={`text-new-pink`}>{'<li> '} </span>
+                                    <a href="https://github.com/AugustoAlmondes" target="_blank" className={`hover:text-new-green transition-all duration-200`}>
+                                        Github
+                                    </a>
+                                    <span className={`text-new-pink`}>{' </li>'}</span>
+                                </p>
+                                <p>
+                                    <span className={`text-new-pink`}>{'<li> '} </span>
+                                    <a href="https://github.com/AugustoAlmondes" target="_blank" className={`hover:text-new-green transition-all duration-200`}>
+                                        Instagram
+                                    </a>
+                                    <span className={`text-new-pink`}>{' </li>'}</span>
+                                </p>
+                                <span className={`text-new-pink`}>{` </ul>`}</span>
+                            </p>
+                        </div>
+                    }
                 </div>
 
             </div>
         </>
     );
 }
+
