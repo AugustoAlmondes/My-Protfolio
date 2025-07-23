@@ -9,6 +9,10 @@
     --color-new-green: #65EE58;
     --color-background: #1C2535;
     --color-background-bright: #2f3e57;
+    --color-font-color: #6587C4;
+    --color-font-data-color: #889BBC;
+    --color-border-color: #313E57;
+    --color-border-line: #515F77;
 
     --color-line-number: #3B4556;
 }

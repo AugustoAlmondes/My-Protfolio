@@ -1,4 +1,4 @@
-import About from "./About";
+import Resume from "./Resume";
 import Profile from "./Profile";
 import Tech from "./Tech";
 import Title from "./Title";
@@ -12,7 +12,7 @@ export default function Hero() {
         >
             <Profile />
             <Title />
-            <About />
+            <Resume />
             <Tech />
         </section>
     );

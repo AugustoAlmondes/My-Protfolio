@@ -1,107 +1,108 @@
-import { useState } from "react";
-import { RiFileList2Fill } from "react-icons/ri";
-import { TbWorld } from "react-icons/tb";
+import { FaCode, FaPager, FaPen, FaServer } from "react-icons/fa";
+
+type CooperationItem = {
+    id: string;
+    icon: React.ReactNode;
+    title: string;
+    description: string;
+    highlights: {
+        text: string;
+        className?: string;
+    }[];
+};
+
+const cooperationItems: CooperationItem[] = [
+    {
+        id: '1',
+        icon: <FaPager className="text-white text-xl" />,
+        title: 'Desenvolvimento Web',
+        description: 'Criação de interfaces visualmente atraentes e fáceis de usar usando estruturas $0 e modernas como $0.',
+        highlights: [
+            { text: 'HTML, CSS, JavaScript' },
+            { text: 'React' }
+        ]
+    },
+    {
+        id: '2',
+        icon: <FaServer className="text-white text-xl" />,
+        title: 'Gerenciamento de banco de dados',
+        description: 'Projetando e gerenciando bancos de dados com tecnologias SQL e NoSQL, como $0, $0 e $0.',
+        highlights: [
+            { text: 'MySQL' },
+            { text: 'PostgreSQL' },
+            { text: 'MongoDB' }
+        ]
+    },
+    {
+        id: '3',
+        icon: <FaPen className="text-white text-xl" />,
+        title: 'UX/UI',
+        description: 'Prototipação de interfaces modernas e atraentes utilizando técnicas de $0 e desenvolvendo com softwares de linha como $0 e $0.',
+        highlights: [
+            { text: 'UX/UI' },
+            { text: 'Figma' },
+            { text: 'Photoshop' }
+        ]
+    },
+    {
+        id: '4',
+        icon: <FaCode className="text-white text-xl" />,
+        title: 'Desenvolvimento de APIs',
+        description: 'Criando e integrando $0 para permitir a comunicação suave entre os sistemas front-end e back-end. Utilizando $0.',
+        highlights: [
+            { text: 'APIs RESTful' },
+            { text: 'Node.js' }
+        ]
+    }
+];
 
 export default function About() {
 
-    const [displayText, setDisplayedText] = useState(1);
-    const styleButton = `text-white py-1 text-sm rounded-t-md w-30 cursor-pointer flex items-center justify-center gap-1 transition-all duration-100`
-
     return (
-        <>
-            <div className={`
-                md:col-start-1 md:col-end-4 md:row-start-4 md:row-end-6
-                col-span-1 row-span-1 h-64 md:h-auto flex flex-col
-            `}>
-                <div className={` h-[10%] flex gap-2`}>
-                    <button
-                        className={`${styleButton} ${displayText === 1 ? "bg-background" : "bg-background/30 text-white/50 hover:bg-background-bright"}`}
-                        onClick={() => setDisplayedText(1)}
-                    >
-                        {displayText === 1 ? <RiFileList2Fill color="#3F6AC7" /> : <RiFileList2Fill />}
-                        Resumo
-                    </button>
-                    <button
-                        className={`${styleButton} ${displayText === 0 ? "bg-background" : "bg-background/30 text-white/50 hover:bg-background-bright"}`}
-                        onClick={() => setDisplayedText(0)}
-                    >
-                        {displayText === 0 ? <TbWorld color="#3F6AC7" /> : <TbWorld />}
-                        Redes
-                    </button>
-                </div>
+        <div className={` w-full bg-background h-auto rounded-2xl grid grid-cols-[1fr_max-content_1fr] p-10`}>
 
-                <div className={` bg-background h-[90%] rounded-r-2xl rounded-b-2xl grid grid-cols-[max-content_2fr]`}>
-                    <div className={`text-line-number px-5 py-2 flex items-center`}>
-                        <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                            {
-                                displayText === 0 &&
-                                <li>6</li>
-                            }
-                        </ul>
-                    </div>
+            <div className={`text-white`}>
+                <h3 className={`text-new-green text-2xl mt-5`}>Cooperação</h3>
+                <ul className={`grid grid-cols-2 grid-rows-2 gap-2 mt-5 `}>
+
                     {
-                        displayText === 1 &&
-
-                        <div className={`text-white px-5 py-2 flex flex-col text-justify justify-center`}>
-                            <p className={`text-new-pink text-start`}>
-                                import
-                                <span className={`text-[#F2604D]`}>{' * '}</span>
-                                from
-                                <span className={`text-new-green`}>{" 'me'"}</span>
-                            </p>
-                            <p>
-                                <span className={`text-new-pink`}>{'<p> '}</span>
-                                Experiência prática em React.js, Node.js e design de interfaces. Atuo no desenvolvimento Front-End e integração FullStack, entrego aplicações web que aliam performance, usabilidade e visual atrativo.
-                                <span className={`text-new-pink`}>{` </p>`}</span>
-                            </p>
-                        </div>
+                        cooperationItems.map(item => (
+                            <li key={item.id} className={`flex flex-col gap-2 border border-border-color p-3`}>
+                                {item.icon}
+                                <h4 className={`text-md`}>{item.title}</h4>
+                                <p className={`text-font-color text-justify text-sm/4`}>
+                                    {item.description.split('$0').map((part, index) => (
+                                        <span key={index}>
+                                            {part}
+                                            {index < item.highlights.length ? (
+                                                <span className={`text-new-pink ${item.highlights[index].className || ''}`}>
+                                                    {item.highlights[index].text}
+                                                </span>
+                                            ) : null}
+                                        </span>
+                                    ))}
+                                </p>
+                            </li>
+                        ))
                     }
-                    {
-                        displayText === 0 &&
 
-                        <div className={`text-white px-5 py-2 flex flex-col text-justify justify-center`}>
-                            <p className={`text-new-pink text-start`}>
-                                import
-                                <span className={`text-[#F2604D]`}>{' * '}</span>
-                                from
-                                <span className={`text-new-green`}>{" 'redes'"}</span>
-                            </p>
-                            <p>
-                                <span className={`text-new-pink`}>{'<ul> '}</span>
-                                <p>
-                                    <span className={`text-new-pink`}>{'<li> '} </span>
-                                    <a href="https://www.linkedin.com/in/augusto-almondes/" target="_blank" className={`hover:text-new-green transition-all duration-200`}>
-                                        Linkedin
-                                    </a>
-                                    <span className={`text-new-pink`}>{' </li>'}</span>
-                                </p>
-                                <p>
-                                    <span className={`text-new-pink`}>{'<li> '} </span>
-                                    <a href="https://github.com/AugustoAlmondes" target="_blank" className={`hover:text-new-green transition-all duration-200`}>
-                                        Github
-                                    </a>
-                                    <span className={`text-new-pink`}>{' </li>'}</span>
-                                </p>
-                                <p>
-                                    <span className={`text-new-pink`}>{'<li> '} </span>
-                                    <a href="https://github.com/AugustoAlmondes" target="_blank" className={`hover:text-new-green transition-all duration-200`}>
-                                        Instagram
-                                    </a>
-                                    <span className={`text-new-pink`}>{' </li>'}</span>
-                                </p>
-                                <span className={`text-new-pink`}>{` </ul>`}</span>
-                            </p>
-                        </div>
-                    }
-                </div>
-
+                </ul>
             </div>
-        </>
+
+            <div className={`w-[3px] h-[90%] bg-new-pink mx-5 my-auto`} />
+
+            <div className={`text-white`}>
+                <h1 className={`text-[3rem] mb-5`}>Sobre mim</h1>
+                <p className={`text-justify my-10`}>
+                    <span className={`text-new-pink`}>
+                        {`<p> `}
+                    </span>
+                    Desenvolvedor Front-End com formação técnica em Administração e graduação em Sistemas  de Informação em andamento. Tenho experiência em projetos práticos com React.js, consumo de  APIs RESTful e desenvolvimento de interfaces responsivas. Domínio de ferramentas como  Figma, Git/GitHub e Vite, além de conhecimentos em Back-End (Node.js e NestJS) e bancos  de dados (MySQL e PostgreSQL). Comprometido, colaborativo e em constante busca por  aprendizado em tecnologias modernas.
+                    <span className={`text-new-pink`}>
+                        {` </p>`}
+                    </span>
+                </p>
+            </div>
+        </div>
     );
 }
-

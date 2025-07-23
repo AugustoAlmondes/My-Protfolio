@@ -1,3 +1,5 @@
+import About from './components/About'
+import Education from './components/Education'
 import Hero from './components/Hero'
 import { WidthProvider } from './context/useWidth/WidthContext'
 import Background from '/background.jpg'
@@ -16,15 +18,18 @@ function App() {
         className='absolute inset-0 z-10'
         style={{
           backgroundImage: `url(${Background})`,
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
           backgroundPosition: 'center',
+          backgroundRepeat:'repeat',
           opacity: 0.05
         }}
       ></div>
 
-      <div className='relative z-20'>
+      <div className='relative z-20 grid md:gap-10 lg:gap-10'>
         <WidthProvider>
           <Hero />
+          <About/>
+          <Education/>
         </WidthProvider>
 
       </div>
