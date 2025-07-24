@@ -1,8 +1,5 @@
-import { FaCode } from 'react-icons/fa';
-import { FaPen } from 'react-icons/fa';
-import { FaServer } from 'react-icons/fa';
-import { FaPager } from 'react-icons/fa';
-import type { CooperationItem } from '../types/cooperations';
+import { FaCode, FaPager, FaPen, FaServer } from "react-icons/fa";
+import type { CooperationItem } from "../types/cooperation";
 
 export const cooperationItems: CooperationItem[] = [
     {

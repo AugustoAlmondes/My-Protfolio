@@ -1,6 +1,5 @@
 import { certifications } from "../data/certifications";
 
-// Props para o componente CertificationsSection
 export const CertificationsSection = () => {
     return (
         <div className="bg-background rounded-2xl p-6 md:pt-8 md:px-8 relative

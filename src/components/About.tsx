@@ -1,4 +1,4 @@
-import { cooperationItems } from "../data/cooperation";
+import { cooperationItems } from "../data/cooperations";
 
 export default function About() {
 

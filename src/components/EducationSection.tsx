@@ -11,17 +11,18 @@ export const EducationSection = () => {
 
                 <div className="space-y-6 pl-8">
                     {formations.map((item, index) => (
-
                         <div key={index} className="relative">
-
+                            {/* Bullet point */}
                             <div className="absolute -left-8 top-0 w-4 h-4 flex items-center justify-center">
                                 <div className="w-2 h-2 rounded-full bg-font-data-color/50" />
                             </div>
 
+                            {/* Data */}
                             <div className="text-font-data-color/50 text-md mb-1">
                                 {item.year}
                             </div>
 
+                            {/* Conteúdo */}
                             <div className="ml-2">
                                 <h2 className="text-new-pink text-lg font-medium">{item.course}</h2>
                                 <h3 className="text-white text-sm">{item.institution}</h3>
