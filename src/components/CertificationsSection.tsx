@@ -18,7 +18,7 @@ export const CertificationsSection: React.FC<CertificationsSectionProps> = ({ ce
             {certifications.length > 0 ? (
                 <div className="space-y-4 max-h-[400px] overflow-y-auto">
                     {certifications.map((cert, index) => (
-                        <div key={index} className="border-l-2 border-font-data-color/50 pl-4 hover:border-new-green transition-colors duration-200 ease-in-out">
+                        <div key={index} className="border-l-2 pl-4 border-new-green hover:cursor-default transition-colors duration-200 ease-in-out">
                             <h2 className="text-new-pink text-lg font-medium">{cert.name}</h2>
                             <p className="text-white text-sm">{cert.issuer}</p>
                             <p className="text-font-data-color/50 text-xs mt-1">{cert.date}</p>

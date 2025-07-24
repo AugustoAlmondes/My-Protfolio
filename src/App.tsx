@@ -1,6 +1,7 @@
 import About from './components/About'
 import Education from './components/Education'
 import Hero from './components/Hero'
+import Projects from './components/Projects'
 import { WidthProvider } from './context/useWidth/WidthContext'
 import Background from '/background.jpg'
 
@@ -8,7 +9,7 @@ function App() {
   return (
     <div className={`bg-[#070B1C] min-h-screen px-4 py-20 relative
       md:px-20
-      lg:px-40 lg:py-40
+      lg:px-30 lg:py-30
       2xl:px-80`
     }>
 
@@ -30,6 +31,7 @@ function App() {
           <Hero />
           <About/>
           <Education/>
+          <Projects />
         </WidthProvider>
 
       </div>
