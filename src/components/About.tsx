@@ -67,7 +67,7 @@ export default function About() {
 
                     {
                         cooperationItems.map(item => (
-                            <li key={item.id} className={`flex flex-col gap-2 border border-border-color p-3`}>
+                            <li key={item.id} className={`flex flex-col gap-2 border border-border-color p-3 rounded-xl`}>
                                 {item.icon}
                                 <h4 className={`text-md`}>{item.title}</h4>
                                 <p className={`text-font-color text-justify text-sm/4`}>

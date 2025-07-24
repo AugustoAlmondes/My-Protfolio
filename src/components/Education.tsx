@@ -32,8 +32,57 @@ export default function Education() {
         }
     ];
 
-    const certifications: CertificationItem[] = [];
-    
+    const certifications: CertificationItem[] = [
+        {
+            id: '1',
+            name: 'React JS, a biblioteca do Facebook',
+            issuer: 'Cursa',
+            date: '2025'
+        },
+        {
+            id: '2',
+            name: 'Desenvolvedor Front-end - React',
+            issuer: 'SENAI',
+            date: '2025'
+        },
+        {
+            id: '3',
+            name: 'Curso de Inglês',
+            issuer: 'SESI',
+            date: '2024'
+        },
+        {
+            id: '4',
+            name: 'Lógica de Programação',
+            issuer: 'SENAI',
+            date: '2024'
+        },
+        {
+            id: '5',
+            name: 'Imersão Dev com google Gemini',
+            issuer: 'Alura',
+            date: '2024'
+        },
+        {
+            id: '6',
+            name: 'HTML, CSS e JavaScript',
+            issuer: 'Fundação Bradesco',
+            date: '2023'
+        },
+        {
+            id: '7',
+            name: 'HTML Básico',
+            issuer: 'Prime Cursos',
+            date: '2023'
+        },
+        {
+            id: '8',
+            name: 'Photoshop CC',
+            issuer: 'Prime Cursos',
+            date: '2023'
+        },
+    ];
+
     return (
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
             <EducationSection title="Educação" items={formations} />

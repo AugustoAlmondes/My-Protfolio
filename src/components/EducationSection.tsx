@@ -12,7 +12,9 @@ type EducationSectionProps = {
 
 export const EducationSection: React.FC<EducationSectionProps> = ({ title, items }) => {
     return (
-        <div className="bg-background rounded-2xl p-6 md:p-8">
+        <div className="bg-background rounded-2xl p-6 md:p-8 relative
+        before:absolute before:content-[''] before:w-full before:h-[50%] before:rounded-2xl before:bg-gradient-to-t before:from-background/60 before:to-transparent before:bottom-0 before:left-0 before:z-10
+        ">
             <h1 className="text-new-green text-2xl font-bold mb-6">{title}</h1>
             <div className="relative">
                 <div className="h-full w-0.5 bg-font-data-color/50 absolute left-4 -translate-x-1/2" />
