@@ -2,6 +2,12 @@ import { useState } from "react";
 import { RiFileList2Fill } from "react-icons/ri";
 import { TbWorld } from "react-icons/tb";
 
+const redes: { [keys: string]: string }[] = [
+    { name: "Linkedin", link: "https://www.linkedin.com/in/augusto-almondes/" },
+    { name: "GitHub", link: "https://github.com/AugustoAlmondes" },
+    { name: "Instagram", link: "https://insagram.com/augustoa_lmondes" },
+];
+
 export default function Resume() {
 
     const [displayText, setDisplayedText] = useState(1);
@@ -73,27 +79,20 @@ export default function Resume() {
                             </p>
                             <p>
                                 <span className={`text-new-pink`}>{'<ul> '}</span>
-                                <p>
-                                    <span className={`text-new-pink`}>{'<li> '} </span>
-                                    <a href="https://www.linkedin.com/in/augusto-almondes/" target="_blank" className={`hover:text-new-green transition-all duration-200`}>
-                                        Linkedin
-                                    </a>
-                                    <span className={`text-new-pink`}>{' </li>'}</span>
-                                </p>
-                                <p>
-                                    <span className={`text-new-pink`}>{'<li> '} </span>
-                                    <a href="https://github.com/AugustoAlmondes" target="_blank" className={`hover:text-new-green transition-all duration-200`}>
-                                        Github
-                                    </a>
-                                    <span className={`text-new-pink`}>{' </li>'}</span>
-                                </p>
-                                <p>
-                                    <span className={`text-new-pink`}>{'<li> '} </span>
-                                    <a href="https://github.com/AugustoAlmondes" target="_blank" className={`hover:text-new-green transition-all duration-200`}>
-                                        Instagram
-                                    </a>
-                                    <span className={`text-new-pink`}>{' </li>'}</span>
-                                </p>
+
+                                {
+                                    redes.map((rede, index) => {
+                                        return (
+                                            <p>
+                                                <span key={index} className={`text-new-pink ml-5`}>{`<li> `} </span>
+                                                <a href={rede.link} target="_blank" className={`hover:text-new-green transition-all duration-200`}>
+                                                    {rede.name}
+                                                </a>
+                                                <span className={`text-new-pink`}>{' </li>'}</span>
+                                            </p>
+                                        )
+                                    })
+                                }
                                 <span className={`text-new-pink`}>{` </ul>`}</span>
                             </p>
                         </div>
