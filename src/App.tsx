@@ -1,9 +1,11 @@
 import About from './components/About'
 import Contact from './components/Contact'
 import Education from './components/Education'
+import Header from './components/Header'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
+import Sticky from './components/Sticky'
 import { WidthProvider } from './context/useWidth/WidthContext'
 import Background from '/background.jpg'
 
@@ -30,6 +32,8 @@ function App() {
 
       <div className='relative z-20 grid md:gap-10 lg:gap-10'>
         <WidthProvider>
+          <Sticky/>
+          <Header/>
           <Hero />
           <About/>
           <Education/>

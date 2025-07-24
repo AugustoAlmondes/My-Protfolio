@@ -7,6 +7,7 @@
 @theme {
     --color-new-pink: #DD5CC5;
     --color-new-green: #65EE58;
+    --color-new-green-dark: #487340;
     --color-new-blue: #50B8F9;
     --color-background-dark: #141C2A;
     --color-background: #1C2535;
@@ -55,6 +56,12 @@
     50% {
         border-color: #fff
     }
+}
+
+*::selection {
+  background-color: #62df57;
+  color: white;
+}{
 }
 
 *::-webkit-scrollbar {
