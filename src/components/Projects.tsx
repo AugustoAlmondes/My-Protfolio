@@ -34,7 +34,7 @@ export default function Projects() {
     const project = projects[currentProjectIndex];
 
     return (
-        <div className="bg-background text-white rounded-2xl p-10 projects-container">
+        <section className="bg-background text-white rounded-2xl p-10 projects-container">
             <h2 className="text-[3rem] mb-6">Projects</h2>
 
             <div className={`w-full bg-background-dark p-10 relative rounded-2xl grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-6 border-background-bright border-2 transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
@@ -101,6 +101,6 @@ export default function Projects() {
                     />
                 ))}
             </div>
-        </div>
+        </section>
     );
 }

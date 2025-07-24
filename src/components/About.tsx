@@ -3,7 +3,7 @@ import { cooperationItems } from "../data/cooperations";
 export default function About() {
 
     return (
-        <div className={` w-full bg-background h-auto rounded-2xl grid grid-cols-[1fr_max-content_1fr] p-10`}>
+        <section className={` w-full bg-background h-auto rounded-2xl grid grid-cols-[1fr_max-content_1fr] p-10`}>
 
             <div className={`text-white`}>
                 <h3 className={`text-new-green text-2xl mt-5`}>Cooperação</h3>
@@ -11,10 +11,10 @@ export default function About() {
 
                     {
                         cooperationItems.map(item => (
-                            <li key={item.id} className={`flex flex-col gap-2 border border-border-color p-3 rounded-xl`}>
+                            <li key={item.id} className={`flex flex-col gap-2 border border-background-bright p-3 rounded-xl hover:hover:border-border-line/70 transition-all duration-200 ease-in-out`}>
                                 {item.icon}
                                 <h4 className={`text-md`}>{item.title}</h4>
-                                <p className={`text-font-color text-justify text-sm/4`}>
+                                <p className={`text-font-color text-justify text-sm/4 font-light`}>
                                     {item.description.split('$0').map((part, index) => (
                                         <span key={index}>
                                             {part}
@@ -47,6 +47,6 @@ export default function About() {
                     </span>
                 </p>
             </div>
-        </div>
+        </section>
     );
 }

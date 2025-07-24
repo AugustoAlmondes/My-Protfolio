@@ -1,7 +1,9 @@
 import About from './components/About'
+import Contact from './components/Contact'
 import Education from './components/Education'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
+import Skills from './components/Skills'
 import { WidthProvider } from './context/useWidth/WidthContext'
 import Background from '/background.jpg'
 
@@ -32,6 +34,8 @@ function App() {
           <About/>
           <Education/>
           <Projects />
+          <Skills />
+          <Contact/>
         </WidthProvider>
 
       </div>
