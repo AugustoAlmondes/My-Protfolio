@@ -62,7 +62,28 @@ export default function Resume() {
                             </p>
                             <p>
                                 <span className={`text-new-pink`}>{'<p> '}</span>
-                                Experiência prática em React.js, Node.js e design de interfaces. Atuo no desenvolvimento Front-End e integração FullStack, entrego aplicações web que aliam performance, usabilidade e visual atrativo.
+                                Experiência prática em
+                                <span className = {`text-new-blue`}>
+                                    {` React.js`}
+                                </span>
+                                ,
+                                <span className = {`text-new-blue`}>
+                                    {` Node.js `}
+                                </span>
+                                e design de interfaces
+                                <span className = {`text-new-blue`}>
+                                    {` (UX/UI)`}
+                                </span>
+                                
+                                . Atuo no desenvolvimento
+                                <span className = {`text-new-blue`}>
+                                    {` Front-End `}
+                                </span>
+                                e integração
+                                <span className = {`text-new-blue`}>
+                                    {` FullStack`}
+                                </span>
+                                , entrego aplicações web que aliam performance, usabilidade e visual atrativo.
                                 <span className={`text-new-pink`}>{` </p>`}</span>
                             </p>
                         </div>
