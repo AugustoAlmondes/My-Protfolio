@@ -1,14 +1,7 @@
-type CertificationItem = {
-    name: string;
-    issuer: string;
-    date: string;
-};
-// Props para o componente CertificationsSection
-type CertificationsSectionProps = {
-    certifications: CertificationItem[];
-};
+import { certifications } from "../data/certifications";
 
-export const CertificationsSection: React.FC<CertificationsSectionProps> = ({ certifications }) => {
+// Props para o componente CertificationsSection
+export const CertificationsSection = () => {
     return (
         <div className="bg-background rounded-2xl p-6 md:pt-8 md:px-8 relative
         before:absolute before:content-[''] before:w-full before:h-[30%] before:rounded-2xl before:bg-gradient-to-t before:from-background before:to-transparent before:bottom-0 before:left-0 before:z-10
