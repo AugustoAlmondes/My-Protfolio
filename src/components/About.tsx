@@ -3,7 +3,7 @@ import { cooperationItems } from "../data/cooperations";
 export default function About() {
 
     return (
-        <section className={` w-full bg-background h-auto rounded-2xl grid grid-cols-[1fr_max-content_1fr] p-10`}>
+        <section id="about" className={` w-full bg-background h-auto rounded-2xl grid grid-cols-[1fr_max-content_1fr] p-10`}>
 
             <div className={`text-white`}>
                 <h3 className={`text-new-green text-2xl mt-5`}>Cooperação</h3>

@@ -7,8 +7,8 @@ export const projects: Projects[] = [
         imageurl: '/projects/Dashboard.jpg',
         role: "Desenvolvedor Front-end & Design UI/UX",
         technologies: "React, JavaScript, CSS modules",
-        deploy: "https://dashboard-augustoalmondes.vercel.app/",
-        github: "https://github.com/AugustoAlmondes/dashboard"
+        deploy: "https://dashboard-cvd.netlify.app/",
+        github: "https://github.com/AugustoAlmondes/Dashboard-on-covid19"
     },
     {
         name: "Workfinder - Busca de Empregos",

@@ -7,7 +7,7 @@
 @theme {
     --color-new-pink: #DD5CC5;
     --color-new-green: #65EE58;
-    --color-new-green-dark: #487340;
+    --color-new-green-dark: #4c8142;
     --color-new-blue: #50B8F9;
     --color-background-dark: #141C2A;
     --color-background: #1C2535;
@@ -26,14 +26,6 @@
     border-right: 2px solid #fff;
     white-space: nowrap;
     animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
-.typing-effect-2 {
-    overflow: hidden;
-    border-right: 2px solid #fff;
-    white-space: nowrap;
-    animation: typing 4s steps(40, end) 3.5s forwards, blink-caret 0.75s step-end infinite;
-    opacity: 0;
 }
 
 @keyframes typing {
@@ -59,9 +51,8 @@
 }
 
 *::selection {
-  background-color: #62df57;
-  color: white;
-}{
+    background-color: #62df57;
+    color: white;
 }
 
 *::-webkit-scrollbar {
@@ -77,4 +68,21 @@
 
 *::-webkit-scrollbar-track {
     background-color: transparent;
+}
+
+@keyframes lightPulse {
+    0% {
+        border-color: #4c8142;
+        color: #4c8142;
+    }
+
+    50% {
+        border-color: #65EE58;
+        color: #65EE58;
+    }
+
+    100% {
+        border-color: #4c8142;
+        color: #4c8142;
+    }
 }

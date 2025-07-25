@@ -5,7 +5,7 @@ import { TbWorld } from "react-icons/tb";
 const redes: { [keys: string]: string }[] = [
     { name: "Linkedin", link: "https://www.linkedin.com/in/augusto-almondes/" },
     { name: "GitHub", link: "https://github.com/AugustoAlmondes" },
-    { name: "Instagram", link: "https://insagram.com/augustoa_lmondes" },
+    { name: "E-mail", link: "almondesaugusto@gmail.com" },
 ];
 
 export default function Resume() {
@@ -63,24 +63,24 @@ export default function Resume() {
                             <p>
                                 <span className={`text-new-pink`}>{'<p> '}</span>
                                 Experiência prática em
-                                <span className = {`text-new-blue`}>
+                                <span className={`text-new-blue`}>
                                     {` React.js`}
                                 </span>
                                 ,
-                                <span className = {`text-new-blue`}>
+                                <span className={`text-new-blue`}>
                                     {` Node.js `}
                                 </span>
                                 e design de interfaces
-                                <span className = {`text-new-blue`}>
+                                <span className={`text-new-blue`}>
                                     {` (UX/UI)`}
                                 </span>
-                                
+
                                 . Atuo no desenvolvimento
-                                <span className = {`text-new-blue`}>
+                                <span className={`text-new-blue`}>
                                     {` Front-End `}
                                 </span>
                                 e integração
-                                <span className = {`text-new-blue`}>
+                                <span className={`text-new-blue`}>
                                     {` FullStack`}
                                 </span>
                                 , entrego aplicações web que aliam performance, usabilidade e visual atrativo.
@@ -104,13 +104,22 @@ export default function Resume() {
                                 {
                                     redes.map((rede, index) => {
                                         return (
-                                            <p>
-                                                <span key={index} className={`text-new-pink ml-5`}>{`<li> `} </span>
-                                                <a href={rede.link} target="_blank" className={`hover:text-new-green transition-all duration-200`}>
-                                                    {rede.name}
-                                                </a>
-                                                <span className={`text-new-pink`}>{' </li>'}</span>
-                                            </p>
+                                            rede.name === 'E-mail' ?
+                                                <p>
+                                                    <span key={index} className={`text-new-pink ml-5`}>{`<li> `} </span>
+                                                    <a href={`mailto:${rede.link}`} target="_blank" className={`hover:text-new-green transition-all duration-200`}>
+                                                        {rede.name}
+                                                    </a>
+                                                    <span className={`text-new-pink`}>{' </li>'}</span>
+                                                </p>
+                                                :
+                                                <p>
+                                                    <span key={index} className={`text-new-pink ml-5`}>{`<li> `} </span>
+                                                    <a href={rede.link} target="_blank" className={`hover:text-new-green transition-all duration-200`}>
+                                                        {rede.name}
+                                                    </a>
+                                                    <span className={`text-new-pink`}>{' </li>'}</span>
+                                                </p>
                                         )
                                     })
                                 }

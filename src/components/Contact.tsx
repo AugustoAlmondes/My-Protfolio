@@ -3,7 +3,7 @@ import { MdEmail } from "react-icons/md";
 
 export default function Contact() {
     return (
-        <section className={`bg-background p-10 rounded-2xl grid grid-cols-[1fr_1fr] gap-10`}>
+        <section id="contact" className={`bg-background p-10 rounded-2xl grid grid-cols-[1fr_1fr] gap-10`}>
             <div>
                 <div className={`text-base/11`}>
                     <h1 className={`text-white text-[3rem]`}>Se interessou?</h1>
