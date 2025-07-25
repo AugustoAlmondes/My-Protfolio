@@ -17,7 +17,7 @@ export default function Sticky() {
             >
                 <RiFileList2Fill size={23} />
 
-                <p className = {`hidden group-hover:block transition-all duration-300`}>
+                <p className = {`hidden group-hover:block transition-all duration-300 ease-in-out`}>
                     Baixar Currículo
                 </p>
             </div>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { RiFileList2Fill } from "react-icons/ri";
 import { TbWorld } from "react-icons/tb";
+import { motion } from "motion/react";
 
 const redes: { [keys: string]: string }[] = [
     { name: "Linkedin", link: "https://www.linkedin.com/in/augusto-almondes/" },
@@ -15,41 +16,45 @@ export default function Resume() {
 
     return (
         <>
-            <div className={`
-                md:col-start-1 md:col-end-4 md:row-start-4 md:row-end-6
-                col-span-1 row-span-1 h-64 md:h-auto flex flex-col
-            `}>
-                <div className={` h-[10%] flex gap-2`}>
-                    <button
-                        className={`${styleButton} ${displayText === 1 ? "bg-background" : "bg-background/30 text-white/50 hover:bg-background-bright"}`}
-                        onClick={() => setDisplayedText(1)}
-                    >
+            <motion.div
+                variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: {
+                        opacity: 1,
+                        y: 0,
+                        transition: { duration: 0.6, ease: "easeOut" }
+                    }
+                }}
+                className={`
+            md:col-start-1 md:col-end-4 md:row-start-4 md:row-end-6
+            col-span-1 row-span-1 h-64 sm:h-72 md:h-auto flex flex-col
+        `}>
+                <div className="h-[10%] flex gap-2">
+                    <button className={`${styleButton} ${displayText === 1 ? "bg-background-bright" : "bg-background/30 text-white/50 hover:bg-background-bright"}`}
+                        onClick={() => setDisplayedText(1)}>
                         {displayText === 1 ? <RiFileList2Fill color="#3F6AC7" /> : <RiFileList2Fill />}
                         Resumo
                     </button>
-                    <button
-                        className={`${styleButton} ${displayText === 0 ? "bg-background" : "bg-background/30 text-white/50 hover:bg-background-bright"}`}
-                        onClick={() => setDisplayedText(0)}
-                    >
+                    <button className={`${styleButton} ${displayText === 0 ? "bg-background-bright" : "bg-background/30 text-white/50 hover:bg-background-bright"}`}
+                        onClick={() => setDisplayedText(0)}>
                         {displayText === 0 ? <TbWorld color="#3F6AC7" /> : <TbWorld />}
                         Redes
                     </button>
                 </div>
 
-                <div className={` bg-background h-[90%] rounded-r-2xl rounded-b-2xl grid grid-cols-[max-content_2fr]`}>
-                    <div className={`text-line-number px-5 py-2 flex items-center`}>
-                        <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                            {
-                                displayText === 0 &&
-                                <li>6</li>
-                            }
-                        </ul>
-                    </div>
+                <div className="bg-background h-[90%] rounded-r-2xl rounded-b-2xl grid grid-cols-[max-content_1fr] sm:grid-cols-[max-content_2fr] border-2 border-background-bright text-sm sm:text-base"> <div className={`text-line-number px-5 py-2 flex items-center`}>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        {
+                            displayText === 0 &&
+                            <li>6</li>
+                        }
+                    </ul>
+                </div>
                     {
                         displayText === 1 &&
 
@@ -129,7 +134,7 @@ export default function Resume() {
                     }
                 </div>
 
-            </div>
+            </motion.div>
         </>
     );
 }

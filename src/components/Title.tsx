@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { motion } from 'motion/react';
 
 export default function Title() {
     const [displayedText, setDisplayedText] = useState('');
@@ -30,7 +31,7 @@ export default function Title() {
 
         for (let i = 0; i < displayedText.length; i++) {
             const char = displayedText[i];
-            
+
             if (char === '{') {
                 if (currentPart.text.length > 0) {
                     parts.push(currentPart);
@@ -58,19 +59,41 @@ export default function Title() {
     };
 
     return (
-        <div className={`md:col-start-1 md:col-end-4 md:row-start-1 md:row-end-4 col-span-1 row-span-1 bg-[#1C2535] rounded-2xl h-64 md:h-auto p-15`}>
-            <div className={`text-white text-[1.2rem]`}>
-                <p> <span className={`text-new-pink`}>{"<span> "}</span>
+        <motion.div
+            variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.6, ease: "easeOut" }
+                }
+            }}
+            className="border-2 border-background-bright md:col-start-1 md:col-end-4 md:row-start-1 md:row-end-4 col-span-1 row-span-1 bg-[#1C2535] rounded-2xl h-64 sm:h-72 md:h-auto p-4 sm:p-6 md:p-8"
+        >
+            <motion.div
+                className="text-white text-base sm:text-lg md:text-[1.2rem]"
+                whileHover={{ x: 5 }}
+            >
+                <p><span className="text-new-pink">{"<span> "}</span>
                     Olá, me chamo Augusto Almondes
-                    <span className={`text-new-pink`} >{" </span>"}</span></p>
-            </div>
+                    <span className="text-new-pink">{" </span>"}</span></p>
+            </motion.div>
 
-            <div className={`text-white text-[3rem] font-medium w-[90%]`}>
+            <motion.div
+                className="text-white text-[2rem] mt-5 sm:mt-2 sm:text-[3rem] md:text-4xl lg:text-[3rem] font-medium w-full md:w-[90%]"
+                whileHover={{ scale: 1.01 }}
+            >
                 <h1>
                     {renderText()}
-                    {showCursor && <span className="inline-block w-1 h-12 bg-white align-middle ml-1"></span>}
+                    {showCursor && (
+                        <motion.span
+                            className="inline-block w-1 h-8 sm:h-10 md:h-12 bg-white align-middle ml-1"
+                            animate={{ opacity: [0, 1, 0] }}
+                            transition={{ repeat: Infinity, duration: 1 }}
+                        />
+                    )}
                 </h1>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 }
