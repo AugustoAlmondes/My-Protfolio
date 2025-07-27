@@ -52,8 +52,9 @@ export default function Resume() {
                         <li>6</li>
                         <li>7</li>
                         {
-                            displayText === 0 &&
-                            <li>8</li>
+                            displayText === 0 ?
+                            <li>8</li>:
+                            <li className = {`text-background lg:text-line-number`}>8</li>
                         }
                     </ul>
                 </div>
@@ -92,6 +93,7 @@ export default function Resume() {
                                 </span>
                                 , entrego aplicações web que aliam performance, usabilidade e visual atrativo.
                                 <span className={`text-new-pink`}>{` </p>`}</span>
+                                <span className = {`text-background`}><br /> .</span>
                             </p>
                         </div>
                     }
