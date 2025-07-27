@@ -1,9 +1,12 @@
 import { RiFileList2Fill } from "react-icons/ri";
+import Curriculo from '../documents/Currículo_Augusto_Almondes.pdf'
 
 export default function Sticky() {
 
     return (
-        <div className = {`group`}>
+        <a className={`group`}
+            href={Curriculo} target="iframe_download" download={true}
+        >
             <div className={`
             fixed bottom-6 right-6
             not-hover:animate-pulse
@@ -17,10 +20,11 @@ export default function Sticky() {
             >
                 <RiFileList2Fill size={23} />
 
-                <p className = {`hidden group-hover:block transition-all duration-300 ease-in-out`}>
+                <p
+                    className={`hidden group-hover:block transition-all duration-300 ease-in-out`}>
                     Baixar Currículo
                 </p>
             </div>
-        </div>
+        </a>
     );
 }
