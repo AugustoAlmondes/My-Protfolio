@@ -24,9 +24,8 @@ export default function Skills() {
                         className="py-4 sm:py-5 px-3 sm:px-4 border-2 border-background-bright rounded-xl hover:border-border-line/70 transition-all duration-200 ease-in-out"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: index * 0.1 + 0.5 }}
-                        whileHover={{ y: -5, boxShadow: "0 5px 15px rgba(63, 106, 199, 0.2)" }}
+                        // viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: index/15 }}
                     >
                         <h3 className="text-new-pink text-base sm:text-lg mb-1 sm:mb-2">{skill.name}</h3>
                         <p className="text-white text-xs sm:text-sm">
@@ -42,7 +41,6 @@ export default function Skills() {
             <motion.div
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
             >
                 <motion.h1
@@ -64,7 +62,6 @@ export default function Skills() {
                             whileInView={{ scale: 1, opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
-                            whileHover={{ y: -5 }}
                         >
                             <img
                                 src={`https://skillicons.dev/icons?i=${icons}`}

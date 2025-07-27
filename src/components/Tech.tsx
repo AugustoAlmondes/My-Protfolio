@@ -21,7 +21,6 @@ export default function Tech() {
                 }
             }}
             className="border-2 border-background-bright md:col-start-4 md:col-end-6 md:row-start-5 md:row-end-6 col-span-1 row-span-1 h-20 sm:h-24 rounded-2xl bg-background p-3 sm:p-5 overflow-hidden relative"
-            whileHover={{ scale: 1.01 }}
         >
             <div className="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-background to-background/0 z-10"></div>
             <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-background to-background/0 z-10"></div>
@@ -38,7 +37,6 @@ export default function Tech() {
                         alt=""
                         className="h-3/4 sm:h-full w-auto object-contain"
                         draggable={false}
-                        whileHover={{ y: -5, scale: 1.1 }}
                     />
                 ))}
             </motion.div>

@@ -94,7 +94,7 @@ export default function Projects() {
                     <h3 className="text-xl sm:text-2xl text-new-green">{project.name}</h3>
 
                     <p
-                        className="text-sm sm:text-base text-justify font-light bg-background-dark p-3 sm:p-4 rounded-lg h-[200px] max-h-[100px] sm:max-h-[100px] overflow-y-auto"
+                        className="text-sm sm:text-base text-justify font-light bg-background-dark p-3 sm:p-4 rounded-lg h-[200px] max-h-[300px] sm:h-[200px] overflow-y-auto"
                     >
                         {project.description}
                     </p>
@@ -116,7 +116,6 @@ export default function Projects() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 text-new-green hover:text-new-blue transition-all duration-200"
-                            whileHover={{ x: 5 }}
                             whileTap={{ scale: 0.95 }}
                         >
                             <FaExternalLinkAlt /> Deploy
@@ -126,7 +125,6 @@ export default function Projects() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 text-new-green hover:text-new-blue transition-all duration-200"
-                            whileHover={{ x: 5 }}
                             whileTap={{ scale: 0.95 }}
                         >
                             <FaGithub /> Repositório

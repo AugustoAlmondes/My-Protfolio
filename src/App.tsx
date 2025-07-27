@@ -9,6 +9,8 @@ import Skills from './components/Skills'
 import Sticky from './components/Sticky'
 import { WidthProvider } from './context/useWidth/WidthContext'
 import Background from '/background.jpg'
+import { ToastContainer } from 'react-toastify'
+
 
 export default function App() {
   useEffect(() => {
@@ -40,6 +42,17 @@ export default function App() {
         md:gap-8   
         lg:gap-10'>
         <WidthProvider>
+          <ToastContainer
+            position="bottom-right"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            pauseOnHover={false}
+            theme='colored'
+            rtl={false}
+            draggable
+          />
           <Sticky />
           <Header />
           <Hero />

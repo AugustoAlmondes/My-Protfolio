@@ -5,7 +5,7 @@ export const EducationSection = () => {
     return (
         <motion.div
             className="bg-background rounded-2xl p-5 sm:p-6 md:p-8 relative border-2 border-background-bright
-      before:absolute before:content-[''] before:w-full before:h-[50%] before:rounded-2xl before:bg-gradient-to-t before:from-background/60 before:to-transparent before:bottom-0 before:left-0 before:z-10"
+        before:absolute before:content-[''] before:w-full before:h-[50%] before:rounded-2xl before:bg-gradient-to-t before:from-background/60 before:to-transparent before:bottom-0 before:left-0 before:z-10"
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -22,8 +22,8 @@ export const EducationSection = () => {
                             className="relative"
                             initial={{ y: 20, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.3, duration: 0.4 }}
+                            // viewport={{ once: true }}
+                            transition={{ delay: index/10, duration: 0.4 }}
                         >
                             <div className="absolute -left-6 sm:-left-8 top-0 w-3 h-3 sm:w-4 sm:h-4 flex items-center justify-center">
                                 <motion.div

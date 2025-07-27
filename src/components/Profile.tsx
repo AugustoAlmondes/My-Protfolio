@@ -17,7 +17,6 @@ export default function Profile() {
                 }
             }}
             className="bg-[#1C2535] border-2 border-background-bright hidden md:block md:col-start-4 md:col-end-6 md:row-start-1 md:row-end-5 rounded-2xl h-full overflow-visible"
-            whileHover={{ scale: 1.02 }}
         >
             <motion.img
                 src="/eu3.png"
