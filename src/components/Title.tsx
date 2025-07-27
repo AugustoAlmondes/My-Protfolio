@@ -79,7 +79,7 @@ export default function Title() {
             </motion.div>
 
             <motion.div
-                className="text-white text-[2.5rem] mt-5 sm:mt-2 sm:text-[3rem] md:text-[2.5rem] lg:text-[3.2rem] font-medium w-full md:w-[90%]"
+                className="text-white text-[2rem] mt-5 sm:mt-2 sm:text-[3rem] md:text-[2.5rem] lg:text-[3.2rem] font-medium w-full md:w-[90%]"
             >
                 <h1>
                     {renderText()}
