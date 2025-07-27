@@ -1,8 +1,30 @@
 import { motion } from 'motion/react';
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { sendEmail } from '../utils/sendEmail';
+import { useState } from 'react';
+import { toast } from 'react-toastify';
+// import { sendEmail } from '../utils/sendEmail';
 
 export default function Contact() {
+
+    const [formData, setFormData] = useState({
+        email: '',
+        title: '',
+        message: ''
+    });
+
+    function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    }
+
+    function handleVoidInput() {
+        if (formData.email === '' || formData.title === '' || formData.message === '') {
+            return true
+        }
+    }
+
     const contactItems = [
         {
             icon: <FaWhatsapp size={30} className="text-new-green" />,
@@ -31,7 +53,7 @@ export default function Contact() {
     ];
 
     return (
-        <motion.section 
+        <motion.section
             id="contact"
             className="bg-background p-6 sm:p-8 md:p-10 rounded-2xl grid grid-cols-1 lg:grid-cols-2 gap-8 border-2 border-background-bright"
             initial={{ opacity: 0 }}
@@ -47,15 +69,13 @@ export default function Contact() {
                 transition={{ duration: 0.5 }}
             >
                 <div className="mb-8">
-                    <motion.h1 
+                    <motion.h1
                         className="text-white text-3xl sm:text-4xl md:text-[3rem] mb-2"
-                        whileHover={{ x: 5 }}
                     >
                         Se interessou?
                     </motion.h1>
-                    <motion.p 
+                    <motion.p
                         className="text-xl sm:text-2xl text-new-pink"
-                        whileHover={{ x: 5 }}
                     >
                         Entre em contato
                     </motion.p>
@@ -69,8 +89,7 @@ export default function Contact() {
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 + 0.3, duration: 0.4 }}
-                            whileHover={{ x: 5 }}
+                            transition={{ delay: index / 10, duration: 0.4 }}
                         >
                             <motion.div whileHover={{ scale: 1.1 }}>
                                 {item.icon}
@@ -79,9 +98,9 @@ export default function Contact() {
                                 <span className="text-new-green text-sm sm:text-base">
                                     {item.platform}
                                 </span>
-                                <a 
-                                    href={item.link} 
-                                    target="_blank" 
+                                <a
+                                    href={item.link}
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-white text-sm sm:text-base hover:text-new-blue transition-colors duration-200"
                                 >
@@ -95,7 +114,17 @@ export default function Contact() {
 
             {/* Formulário */}
             <motion.form
-                onSubmit={(e) => e.preventDefault()}
+                onSubmit={(e) => {
+                    e.preventDefault();
+                    console.log(formData);
+                    if (!handleVoidInput()) {
+                        sendEmail(e.currentTarget);
+                        toast.success("Email enviado com Sucesso!");
+                    }
+                    else {
+                        toast.error("Preencha todos os campos!");
+                    }
+                }}
                 initial={{ x: 20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
@@ -103,35 +132,38 @@ export default function Contact() {
                 className="space-y-4 sm:space-y-6"
             >
                 <motion.div
-                    whileHover={{ scale: 1.01 }}
                     transition={{ duration: 0.2 }}
                 >
                     <label className="text-white font-light text-sm sm:text-base">E-mail</label>
-                    <input 
-                        type="email" 
+                    <input
+                        onChange={handleChange}
+                        name='email'
+                        type="email"
                         className="mt-1 w-full bg-background-bright border-2 border-border-line rounded-lg sm:rounded-xl py-2 px-4 outline-none placeholder:text-border-line/70 text-white text-sm sm:text-base"
                         placeholder="exemplo@teste.com"
                     />
                 </motion.div>
 
                 <motion.div
-                    whileHover={{ scale: 1.01 }}
                     transition={{ duration: 0.2 }}
                 >
                     <label className="text-white font-light text-sm sm:text-base">Assunto</label>
-                    <input 
-                        type="text" 
+                    <input
+                        onChange={handleChange}
+                        name='title'
+                        type="text"
                         className="mt-1 w-full bg-background-bright border-2 border-border-line rounded-lg sm:rounded-xl py-2 px-4 outline-none placeholder:text-border-line/70 text-white text-sm sm:text-base"
                         placeholder="Tenho interesse..."
                     />
                 </motion.div>
 
                 <motion.div
-                    whileHover={{ scale: 1.01 }}
                     transition={{ duration: 0.2 }}
                 >
                     <label className="text-white font-light text-sm sm:text-base">Mensagem</label>
-                    <textarea 
+                    <textarea
+                        onChange={handleChange}
+                        name='message'
                         className="mt-1 w-full bg-background-bright border-2 border-border-line rounded-lg sm:rounded-xl py-2 px-4 outline-none placeholder:text-border-line/70 text-white text-sm sm:text-base resize-none"
                         placeholder="Escreva sua mensagem aqui..."
                         rows={5}
@@ -141,9 +173,7 @@ export default function Contact() {
                 <motion.input
                     type="submit"
                     value="Enviar"
-                    className="w-full sm:w-60 bg-border-line border-2 border-border-line rounded-lg sm:rounded-xl py-2 px-4 outline-none text-white hover:bg-new-blue hover:border-new-blue transition-all duration-200 ease-in-out cursor-pointer text-sm sm:text-base"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    className="w-full sm:w-60 bg-border-line border-2 border-border-line rounded-lg sm:rounded-xl py-1 px-4 outline-none text-white hover:bg-new-pink hover:border-new-pink transition-all duration-200 ease-in-out cursor-pointer text-sm sm:text-base"
                 />
             </motion.form>
         </motion.section>
