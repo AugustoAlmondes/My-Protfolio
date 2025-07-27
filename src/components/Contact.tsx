@@ -14,6 +14,14 @@ export default function Contact() {
         message: ''
     });
 
+    function clearInput(){
+        setFormData({
+            email: '',
+            title: '',
+            message: ''
+        })
+    }
+
     function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -120,6 +128,7 @@ export default function Contact() {
                     if (!handleVoidInput()) {
                         sendEmail(e.currentTarget);
                         toast.success("Email enviado com Sucesso!");
+                        clearInput();
                     }
                     else {
                         toast.error("Preencha todos os campos!");
@@ -139,6 +148,7 @@ export default function Contact() {
                         onChange={handleChange}
                         name='email'
                         type="email"
+                        value={formData.email}
                         className="mt-1 w-full bg-background-bright border-2 border-border-line rounded-lg sm:rounded-xl py-2 px-4 outline-none placeholder:text-border-line/70 text-white text-sm sm:text-base"
                         placeholder="exemplo@teste.com"
                     />
@@ -152,6 +162,7 @@ export default function Contact() {
                         onChange={handleChange}
                         name='title'
                         type="text"
+                        value={formData.title}
                         className="mt-1 w-full bg-background-bright border-2 border-border-line rounded-lg sm:rounded-xl py-2 px-4 outline-none placeholder:text-border-line/70 text-white text-sm sm:text-base"
                         placeholder="Tenho interesse..."
                     />
@@ -164,6 +175,7 @@ export default function Contact() {
                     <textarea
                         onChange={handleChange}
                         name='message'
+                        value={formData.message}
                         className="mt-1 w-full bg-background-bright border-2 border-border-line rounded-lg sm:rounded-xl py-2 px-4 outline-none placeholder:text-border-line/70 text-white text-sm sm:text-base resize-none"
                         placeholder="Escreva sua mensagem aqui..."
                         rows={5}

@@ -51,8 +51,10 @@ export default function Resume() {
                         <li>5</li>
                         <li>6</li>
                         <li>7</li>
-                        <li>8</li>
-                        <li>9</li>
+                        {
+                            displayText === 0 &&
+                            <li>8</li>
+                        }
                     </ul>
                 </div>
                     {
