@@ -1,5 +1,5 @@
 import { RiFileList2Fill } from "react-icons/ri";
-import Curriculo from '../documents/Currículo_Augusto_Almondes.pdf'
+import Curriculo from '../documents/Currículo.pdf'
 
 export default function Sticky() {
 
