@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { cooperationItems } from "../data/cooperations";
 import { BsDownload } from "react-icons/bs";
-import Curriculo from '../documents/Currículo_Augusto_Almondes.pdf'
+import Curriculo from '../documents/Currículo.pdf'
 
 // Variantes de animação
 const containerVariants = {
