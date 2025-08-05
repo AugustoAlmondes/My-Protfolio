@@ -28,7 +28,7 @@ export default function Projects() {
     }, []);
 
     useEffect(() => {
-        const interval = setInterval(goToNextProject, 7000);
+        const interval = setInterval(goToNextProject, 10000);
         return () => clearInterval(interval);
     }, [goToNextProject]);
 

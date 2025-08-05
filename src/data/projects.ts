@@ -6,7 +6,7 @@ export const projects: Projects[] = [
         description: "Ainda em desenvolvimendo, essa plataforma auxiliará o usuário a gerar cartas de apresentação de acordo com o tema escolhido, tudo de forma dinâmica e intuitiva utilizando Inteligência Artificial.",
         imageurl: '/projects/aiapcard.jpg',
         role: "Desenvolvedor FullStack & Design UI/UX",
-        technologies: "React, Tailwind CSS, TypéScript, API, Adobe Photoshop, Vegas PRO, Figma",
+        technologies: "React, Tailwind CSS, TypeScript, API, Adobe Photoshop, Vegas PRO, Figma",
         deploy: "#",
         github: "https://github.com/AugustoAlmondes/AI-ApCard"
     },
