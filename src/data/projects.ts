@@ -2,6 +2,15 @@ import type { Projects } from "../types/project";
 
 export const projects: Projects[] = [
     {
+        name: "AI ApCard",
+        description: "Ainda em desenvolvimendo, essa plataforma auxiliará o usuário a gerar cartas de apresentação de acordo com o tema escolhido, tudo de forma dinâmica e intuitiva utilizando Inteligência Artificial.",
+        imageurl: '/projects/aiapcard.jpg',
+        role: "Desenvolvedor FullStack & Design UI/UX",
+        technologies: "React, Tailwind CSS, TypéScript, API, Adobe Photoshop, Vegas PRO, Figma",
+        deploy: "#",
+        github: "https://github.com/AugustoAlmondes/AI-ApCard"
+    },
+    {
         name: "Dashboard COVID-19",
         description: "Dashboard interativo para visualização de dados relacionados à COVID-19, utilizando React.js e CSS modules. Desenvolvi o design visual com Figma e Photoshop. O projeto consome dados de uma API externa para exibir estatísticas atualizadas, como casos confirmados, recuperados e óbitos, em gráficos dinâmicos e responsivos. Implementei filtros por país e data, além de um design intuitivo e adaptável para diferentes telas. O deploy foi realizado no Netlify.",
         imageurl: '/projects/Dashboard.jpg',
@@ -72,5 +81,5 @@ export const projects: Projects[] = [
         technologies: "React, CSS, JavaScript, API",
         deploy: "https://cep-search-react.netlify.app",
         github: "https://github.com/AugustoAlmondes/CEP-Search-React"
-    },
+    }
 ]
