@@ -11,6 +11,15 @@ export const projects: Projects[] = [
         github: "https://github.com/AugustoAlmondes/AI-ApCard"
     },
     {
+        name: "Marvel Comics Store",
+        description: "A Marvel Comics Store é uma aplicação React + TypeScript que simula uma loja virtual de HQs da Marvel. O projeto foi pensado mobile-first, com UI autoral desenvolvida no Figma e finalizada com recursos de estilização no Tailwind CSS e Framer Motion.",
+        imageurl: '/projects/marvel.jpg',
+        role: "Desenvolvedor Front-end & Design UI/UX",
+        technologies: "React, Tailwind CSS, TypeScript, API, Adobe Photoshop, Figma",
+        deploy: "https://marvel-comic-store.netlify.app",
+        github: "https://github.com/AugustoAlmondes/Marvel-Comics-Store"
+    },
+    {
         name: "Dashboard COVID-19",
         description: "Dashboard interativo para visualização de dados relacionados à COVID-19, utilizando React.js e CSS modules. Desenvolvi o design visual com Figma e Photoshop. O projeto consome dados de uma API externa para exibir estatísticas atualizadas, como casos confirmados, recuperados e óbitos, em gráficos dinâmicos e responsivos. Implementei filtros por país e data, além de um design intuitivo e adaptável para diferentes telas. O deploy foi realizado no Netlify.",
         imageurl: '/projects/Dashboard.jpg',
