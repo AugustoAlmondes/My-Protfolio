@@ -7,7 +7,7 @@ export const projects: Projects[] = [
         imageurl: '/projects/aiapcard.jpg',
         role: "Desenvolvedor FullStack & Design UI/UX",
         technologies: "React, Tailwind CSS, TypeScript, API, Adobe Photoshop, Vegas PRO, Figma",
-        deploy: "#",
+        deploy: "https://ai-apcard.netlify.app",
         github: "https://github.com/AugustoAlmondes/AI-ApCard"
     },
     {
