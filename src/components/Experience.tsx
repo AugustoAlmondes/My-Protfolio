@@ -1,0 +1,51 @@
+import { motion } from "motion/react";
+import { experiences } from "../data/jobs";
+export default function Experience() {
+    return (
+        <>
+            <div id="experience" className="bg-background rounded-2xl p-5 sm:p-6 md:p-8 relative border-2 border-background-bright before:absolute before:content-[''] before:w-full before:h-[50%] before:rounded-2xl before:bg-gradient-to-t before:from-background/60 before:to-transparent before:bottom-0 before:left-0 before:z-10">
+
+                <h1 className="text-new-green text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Experiências</h1>
+
+                <div className="relative">
+                    <div className="h-full w-0.5 bg-font-data-color/50 absolute left-3 sm:left-4 -translate-x-1/2" />
+
+                    <div className="space-y-4 sm:space-y-6 pl-6 sm:pl-8 text-font-color max-h-[400px] overflow-y-auto pr-2">
+                        {
+                            experiences.map((item, index) => (
+                                <motion.div
+                                    key={index}
+                                    className="relative"
+                                    initial={{ y: 20, opacity: 0 }}
+                                    whileInView={{ y: 0, opacity: 1 }}
+                                    transition={{ delay: index / 10, duration: 0.4 }}
+                                >
+
+                                    <div className="absolute -left-6 sm:-left-9 top-0 w-3 h-3 sm:w-4 sm:h-4 flex items-center justify-center">
+                                        <motion.div
+                                            className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-font-data-color/50"
+                                        />
+                                    </div>
+                                    <div className="text-font-data-color/50 text-sm sm:text-md mb-1">
+                                        {item.year}
+                                    </div>
+                                    <div className="ml-2">
+                                        <h2 className="text-new-pink text-base sm:text-lg font-medium">
+                                            {item.role}
+                                        </h2>
+                                        <h3 className="text-white text-xs sm:text-sm">
+                                            {item.company}
+                                        </h3>
+                                        <p className="text-font-color text-xs sm:text-sm mt-1 sm:mt-2 text-justify mr-2 md:mr-5">
+                                            {item.description}
+                                        </p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                    </div>
+
+                </div>
+            </div>
+        </>
+    );
+}

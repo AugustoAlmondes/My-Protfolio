@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import About from './components/About'
 import Contact from './components/Contact'
-import Education from './components/Education'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
@@ -10,6 +9,8 @@ import Sticky from './components/Sticky'
 import { WidthProvider } from './context/useWidth/WidthContext'
 import Background from '/background.jpg'
 import { ToastContainer } from 'react-toastify'
+import Experience from './components/Experience'
+import Education from './components/Education'
 
 
 export default function App() {
@@ -57,6 +58,7 @@ export default function App() {
           <Header />
           <Hero />
           <About />
+          <Experience/>
           <Education />
           <Projects />
           <Skills />

@@ -27,6 +27,7 @@ export default function Header() {
         { section: 'hero', label: 'Home' },
         { section: 'about', label: 'Sobre' },
         { section: 'projects', label: 'Projetos' },
+        { section: 'experience', label: 'Experiencias' },
         { section: 'contact', label: 'Contato' }
     ];
 
