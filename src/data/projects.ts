@@ -3,7 +3,7 @@ import type { Projects } from "../types/project";
 export const projects: Projects[] = [
     {
         name: "AI ApCard",
-        description: "Ainda em desenvolvimendo, essa plataforma auxiliará o usuário a gerar cartas de apresentação de acordo com o tema escolhido, tudo de forma dinâmica e intuitiva utilizando Inteligência Artificial.",
+        description: "Uma plataforma que auxilia o usuário a gerar apresentações profissionais de acordo com seus dados, tudo de forma dinâmica e intuitiva utilizando Inteligência Artificial. O AI ApCart nasceu com o objetivo de simplificar a criação de apresentações profissionais e personalizadas.",
         imageurl: '/projects/aiapcard.jpg',
         role: "Desenvolvedor FullStack & Design UI/UX",
         technologies: "React, Tailwind CSS, TypeScript, API, Adobe Photoshop, Vegas PRO, Figma",
