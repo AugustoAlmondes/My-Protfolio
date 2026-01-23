@@ -2,7 +2,7 @@ import type { ExperienceItem } from "../types/experience";
 
 export const experiences: ExperienceItem[] = [
     {
-        year: "2025",
+        year: "2025-2026",
         role: "Desenvolvedor Front-End Júnior",
         company: "Neo Aplicações Tecnológicas LTDA",
         description:
@@ -16,7 +16,7 @@ export const experiences: ExperienceItem[] = [
         "Ministrei aulas de Banco de Dados e Redes de Computadores para turmas do ensino técnico, desenvolvendo conteúdos teóricos e atividades práticas alinhadas às necessidades do mercado. Planejei e executei projetos pedagógicos voltados à aplicação de conceitos de infraestrutura, modelagem de dados e fundamentos de redes, promovendo aprendizado consistente e aplicado."
     },
     {
-        year: "2022–2024",
+        year: "2022-2024",
         role: "Desenvolvedor Front-End",
         company: "Tempest",
         description:
