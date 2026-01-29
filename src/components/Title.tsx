@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 export default function Title() {
     const [displayedText, setDisplayedText] = useState('');
-    const fullText = "Desenvolvedor {Front-end} & Web {Design}";
+    const fullText = "Desenvolvedor {Web} & Web {Design}";
     const [currentIndex, setCurrentIndex] = useState(0);
     const [showCursor, setShowCursor] = useState(true);
 
