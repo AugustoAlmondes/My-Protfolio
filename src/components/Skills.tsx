@@ -51,7 +51,7 @@ export default function Skills() {
 
                 <div className="w-full flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5">
                     {[
-                        "html,css,react,tailwind,bootstrap",
+                        "html,css,react,next,tailwind,bootstrap",
                         "figma,photoshop,nodejs,express,nest,prisma",
                         "git,github,vercel,netlify,docker,mysql",
                         "postgresql,mongodb,js,ts,c,python"
