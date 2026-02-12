@@ -53,7 +53,7 @@ export default function Skills() {
                     {[
                         "html,css,react,next,tailwind,bootstrap",
                         "figma,photoshop,nodejs,express,nest,prisma",
-                        "git,github,vercel,netlify,docker,mysql",
+                        "git,github,vercel,netlify,docker,mysql,supabase",
                         "postgresql,mongodb,js,ts,c,python"
                     ].map((icons, index) => (
                         <motion.div

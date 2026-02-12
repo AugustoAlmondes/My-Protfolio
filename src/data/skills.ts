@@ -19,7 +19,7 @@ export const skills: Skill[] = [
     },
     {
         name: 'Banco de Dados',
-        technologies: ['MySQL', 'PostgreSQL', 'MongoDB']
+        technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Supabase']
     },
     {
         name: 'Linguagens',
