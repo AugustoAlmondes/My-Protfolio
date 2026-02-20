@@ -19,7 +19,7 @@ export default function Profile() {
             className="bg-[#1C2535] border-2 border-background-bright hidden md:block md:col-start-4 md:col-end-6 md:row-start-1 md:row-end-5 rounded-2xl h-full overflow-visible"
         >
             <motion.img
-                src="/eu4.jpg"
+                src="/eu4.png"
                 alt="Augusto Almondes"
                 className="w-full h-full object-cover rounded-2xl"
                 initial={{ opacity: 0 }}
