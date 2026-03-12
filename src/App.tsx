@@ -7,10 +7,9 @@ import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Sticky from './components/Sticky'
 import { WidthProvider } from './context/useWidth/WidthContext'
-import Background from '/background.jpg'
-import { ToastContainer } from 'react-toastify'
 import Experience from './components/Experience'
 import Education from './components/Education'
+import { ToastContainer } from 'react-toastify'
 
 
 export default function App() {
@@ -28,14 +27,7 @@ export default function App() {
       {/* Fundos (mantidos iguais) */}
       <div className='absolute inset-0 bg-[#070B1C] z-0'></div>
       <div
-        className='absolute inset-0 z-10'
-        style={{
-          backgroundImage: `url(${Background})`,
-          backgroundSize: 'contain',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'repeat',
-          opacity: 0.05
-        }}
+        className='absolute inset-0 z-10 bg-[url(/background.jpg)] bg-contain bg-center bg-repeat opacity-5'
       ></div>
 
       {/* Container principal - Adicionei gap para mobile */}
@@ -58,7 +50,7 @@ export default function App() {
           <Header />
           <Hero />
           <About />
-          <Experience/>
+          <Experience />
           <Education />
           <Projects />
           <Skills />

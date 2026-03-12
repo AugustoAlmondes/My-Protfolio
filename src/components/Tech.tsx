@@ -25,8 +25,7 @@ export default function Tech() {
             <div className="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-background to-background/0 z-10"></div>
             <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-background to-background/0 z-10"></div>
             <motion.div
-                className="flex gap-6 sm:gap-10 items-center h-full animate-carousel relative"
-                style={{ minWidth: "max-content" }}
+                className="flex gap-6 sm:gap-10 items-center h-full animate-carousel relative min-w-max"
                 animate={{ x: ["0%", "-51.5%"] }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             >
