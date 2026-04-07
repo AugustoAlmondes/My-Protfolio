@@ -4,6 +4,6 @@ export type Projects = {
     imageurl: string;
     role: string;
     technologies: string;
-    deploy: string;
-    github: string;
+    deploy?: string;
+    github?: string;
 }

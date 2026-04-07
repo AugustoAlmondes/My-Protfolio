@@ -2,6 +2,14 @@ import type { Projects } from "../types/project";
 
 export const projects: Projects[] = [
     {
+        name: "IEP/UFPI",
+        description: "O Instituto de Economia Política (IEP) da Universidade Federal do Piauí (UFPI), surgiu no ano de 2025 a partir da necessidade de ampliação das atividades debates no ceio do Grupo de Análise de Economia Política (GAEP) (UFPI) (fundado em maio de 2024), em função de promover as publicidades dos debates e pesquisas do Grupo e incorporar as atividades inseridas no Programa da Pesquisas sobre o Nordeste (ProNordeste) (UFPI) (2025).",
+        imageurl: '/projects/iep.png',
+        role: "Desenvolvedor FullStack & Design UI/UX",
+        technologies: "React, Tailwind CSS, TypeScript, API, NestJS, Prisma ORM, PostgreSQL, Figma, Vercel",
+        deploy: "https://iep-ufpi.vercel.app"
+    },
+    {
         name: "AI ApCard",
         description: "Uma plataforma que auxilia o usuário a gerar apresentações profissionais de acordo com seus dados, tudo de forma dinâmica e intuitiva utilizando Inteligência Artificial. O AI ApCart nasceu com o objetivo de simplificar a criação de apresentações profissionais e personalizadas.",
         imageurl: '/projects/aiapcard.jpg',
@@ -28,24 +36,24 @@ export const projects: Projects[] = [
         deploy: "https://dashboard-cvd.netlify.app/",
         github: "https://github.com/AugustoAlmondes/Dashboard-on-covid19"
     },
-    {
-        name: "Workfinder - Busca de Empregos",
-        description: "Plataforma web para cadastro e busca de empregos. No front-end, criei interfaces responsivas com React.js e design visual no Figma. No backend, utilizei Node.js, NestJS e Prisma ORM para gerenciar dados em MySQL. Realizei a integração total entre front-end e backend, com deploy via Netlify (front-end) e Railway (Banco de dados e API).",
-        imageurl: '/projects/workfinder.jpg',
-        role: "Desenvolvedor FullStack & Design UI/UX",
-        technologies: "React, CSS modules, Prisma ORM, NestJS, MySQL, Node.js, API, Figma, Photoshop",
-        deploy: "https://workfinder-job.netlify.app/",
-        github: "https://github.com/AugustoAlmondes/WorkFinder-Site/tree/responsive"
-    },
-    {
-        name: "Boost Video - Hackathon Klike.ai",
-        description: "Projeto desenvolvido durante hackathon promovido pela Klike.ai. Fui responsável pelo design visual (Figma e Photoshop), implementação das interfaces responsivas com React.js e CSS modules, além de produzir edições de vídeo usados na plataforma final (Vegas PRO).",
-        imageurl: '/projects/boostvideo.jpg',
-        role: "Desenvolvedor FullStack & Design UI/UX",
-        technologies: "React, CSS modules, JavaScript, Vegas PRO, Figma, Photoshop",
-        deploy: "https://boost-ads.netlify.app/",
-        github: "https://github.com/AugustoAlmondes/Boost-video"
-    },
+    // {
+    //     name: "Workfinder - Busca de Empregos",
+    //     description: "Plataforma web para cadastro e busca de empregos. No front-end, criei interfaces responsivas com React.js e design visual no Figma. No backend, utilizei Node.js, NestJS e Prisma ORM para gerenciar dados em MySQL. Realizei a integração total entre front-end e backend, com deploy via Netlify (front-end) e Railway (Banco de dados e API).",
+    //     imageurl: '/projects/workfinder.jpg',
+    //     role: "Desenvolvedor FullStack & Design UI/UX",
+    //     technologies: "React, CSS modules, Prisma ORM, NestJS, MySQL, Node.js, API, Figma, Photoshop",
+    //     deploy: "https://workfinder-job.netlify.app/",
+    //     github: "https://github.com/AugustoAlmondes/WorkFinder-Site/tree/responsive"
+    // },
+    // {
+    //     name: "Boost Video - Hackathon Klike.ai",
+    //     description: "Projeto desenvolvido durante hackathon promovido pela Klike.ai. Fui responsável pelo design visual (Figma e Photoshop), implementação das interfaces responsivas com React.js e CSS modules, além de produzir edições de vídeo usados na plataforma final (Vegas PRO).",
+    //     imageurl: '/projects/boostvideo.jpg',
+    //     role: "Desenvolvedor FullStack & Design UI/UX",
+    //     technologies: "React, CSS modules, JavaScript, Vegas PRO, Figma, Photoshop",
+    //     deploy: "https://boost-ads.netlify.app/",
+    //     github: "https://github.com/AugustoAlmondes/Boost-video"
+    // },
     {
         name: "Landing Page Donut",
         description: "Página promocional de donuts desenvolvida com React.js, destacando animações suaves, responsividade e design atrativo. Implementei um menu interativo para mobile e deploy no Netlify.",
@@ -55,40 +63,40 @@ export const projects: Projects[] = [
         deploy: "https://donut-page.netlify.app/",
         github: "https://github.com/AugustoAlmondes/Landing-Page-React"
     },
-    {
-        name: "Currency Converter React",
-        description: "Aplicação web desenvolvida com React.js para conversão de moedas em tempo real. O projeto consome dados de uma API externa para obter as taxas de câmbio atualizadas, permitindo ao usuário converter valores entre diversas moedas de forma prática e intuitiva.",
-        imageurl: '/projects/moeda.jpg',
-        role: "Desenvolvedor Front-end & Design UI/UX",
-        technologies: "React, CSS, JavaScript, API",
-        deploy: "https://benevolent-buttercream-ef8d7d.netlify.app",
-        github: "https://github.com/AugustoAlmondes/Currency-Converter-React"
-    },
-    {
-        name: "Search Github User",
-        description: "Aplicação web construída com React.js que consome a API pública do GitHub para buscar e exibir informações de perfis de usuários. A interface permite inserir um nome de usuário e visualizar dados como avatar e seguidores.",
-        imageurl: '/projects/github.jpg',
-        role: "Desenvolvedor Front-end & Design UI/UX",
-        technologies: "React, CSS modules, TypeScript, API",
-        deploy: "https://user-github-search.netlify.app",
-        github: "https://github.com/AugustoAlmondes/Search-Github-User"
-    },
-    {
-        name: "WikiSearch",
-        description: "WikiSearch é um buscador moderno e intuitivo que utiliza a API da Wikipedia para trazer resultados de artigos em tempo real. Com um design clean e responsivo.",
-        imageurl: '/projects/wiki.jpg',
-        role: "Desenvolvedor Front-end & Design UI/UX",
-        technologies: "HTML, CSS, JavaScript, API",
-        deploy: "https://fastsearchwiki.netlify.app",
-        github: "https://github.com/AugustoAlmondes/Fast-Search-Wiki"
-    },
-    {
-        name: "CEP Search React",
-        description: "Um buscador de CEP sofisticado com tema dark moderno, combinando elegância e funcionalidade. Desenvolvido em React, consome a API ViaCEP para fornecer informações precisas de endereços em tempo real.",
-        imageurl: '/projects/cep.jpg',
-        role: "Desenvolvedor Front-end & Design UI/UX",
-        technologies: "React, CSS, JavaScript, API",
-        deploy: "https://cep-search-react.netlify.app",
-        github: "https://github.com/AugustoAlmondes/CEP-Search-React"
-    }
+    // {
+    //     name: "Currency Converter React",
+    //     description: "Aplicação web desenvolvida com React.js para conversão de moedas em tempo real. O projeto consome dados de uma API externa para obter as taxas de câmbio atualizadas, permitindo ao usuário converter valores entre diversas moedas de forma prática e intuitiva.",
+    //     imageurl: '/projects/moeda.jpg',
+    //     role: "Desenvolvedor Front-end & Design UI/UX",
+    //     technologies: "React, CSS, JavaScript, API",
+    //     deploy: "https://benevolent-buttercream-ef8d7d.netlify.app",
+    //     github: "https://github.com/AugustoAlmondes/Currency-Converter-React"
+    // },
+    // {
+    //     name: "Search Github User",
+    //     description: "Aplicação web construída com React.js que consome a API pública do GitHub para buscar e exibir informações de perfis de usuários. A interface permite inserir um nome de usuário e visualizar dados como avatar e seguidores.",
+    //     imageurl: '/projects/github.jpg',
+    //     role: "Desenvolvedor Front-end & Design UI/UX",
+    //     technologies: "React, CSS modules, TypeScript, API",
+    //     deploy: "https://user-github-search.netlify.app",
+    //     github: "https://github.com/AugustoAlmondes/Search-Github-User"
+    // },
+    // {
+    //     name: "WikiSearch",
+    //     description: "WikiSearch é um buscador moderno e intuitivo que utiliza a API da Wikipedia para trazer resultados de artigos em tempo real. Com um design clean e responsivo.",
+    //     imageurl: '/projects/wiki.jpg',
+    //     role: "Desenvolvedor Front-end & Design UI/UX",
+    //     technologies: "HTML, CSS, JavaScript, API",
+    //     deploy: "https://fastsearchwiki.netlify.app",
+    //     github: "https://github.com/AugustoAlmondes/Fast-Search-Wiki"
+    // },
+    // {
+    //     name: "CEP Search React",
+    //     description: "Um buscador de CEP sofisticado com tema dark moderno, combinando elegância e funcionalidade. Desenvolvido em React, consome a API ViaCEP para fornecer informações precisas de endereços em tempo real.",
+    //     imageurl: '/projects/cep.jpg',
+    //     role: "Desenvolvedor Front-end & Design UI/UX",
+    //     technologies: "React, CSS, JavaScript, API",
+    //     deploy: "https://cep-search-react.netlify.app",
+    //     github: "https://github.com/AugustoAlmondes/CEP-Search-React"
+    // }
 ]

@@ -35,7 +35,7 @@ export default function Projects() {
     const project = projects[currentProjectIndex];
 
     return (
-        <section id='projects' className="bg-background text-white rounded-2xl p-6 sm:p-8 md:p-10 border-2 border-background-bright">
+        <section id='projects' className="bg-background text-white rounded-2xl p-2 sm:p-8 md:p-10 border-2 border-background-bright">
             <motion.h2
                 className="text-2xl sm:text-3xl md:text-[3rem] mb-4 sm:mb-6"
                 initial={{ opacity: 0, y: 20 }}
@@ -48,7 +48,7 @@ export default function Projects() {
 
             {/* Container Principal */}
             <motion.div
-                className={`w-full bg-background-dark p-6 sm:p-8 relative rounded-2xl flex flex-col gap-6 border-background-bright border-2 transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}
+                className={`w-full bg-background-dark p-3 sm:p-8 relative rounded-2xl flex flex-col gap-6 border-background-bright border-2 transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -111,24 +111,30 @@ export default function Projects() {
                     </div>
 
                     <div className="flex flex-wrap gap-4 mt-2 text-sm sm:text-base">
-                        <motion.a
-                            href={project.deploy}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-new-green hover:text-new-blue transition-all duration-200"
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            <FaExternalLinkAlt /> Deploy
-                        </motion.a>
-                        <motion.a
-                            href={project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-new-green hover:text-new-blue transition-all duration-200"
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            <FaGithub /> Repositório
-                        </motion.a>
+                        {project.deploy && (
+                            <motion.a
+                                href={project.deploy}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 text-new-green hover:text-new-blue transition-all duration-200"
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                <FaExternalLinkAlt /> Deploy
+                            </motion.a>
+                        )}
+                        {
+                            project.github && (
+                                <motion.a
+                                    href={project.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 text-new-green hover:text-new-blue transition-all duration-200"
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    <FaGithub /> Repositório
+                                </motion.a>
+                            )
+                        }
                     </div>
                 </motion.div>
             </motion.div>
