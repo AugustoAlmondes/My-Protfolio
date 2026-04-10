@@ -2,6 +2,14 @@ import type { Projects } from "../types/project";
 
 export const projects: Projects[] = [
     {
+        name: "RAIN - Antecipe o amanhã, proteja o agora",
+        description: "O RAIN é uma plataforma de previsão do tempo, que utiliza dados de satélite e modelos matemáticos para fornecer informações precisas sobre o clima em tempo real. O projeto nasceu com o objetivo de ajudar pessoas a se prevenirem de possíveis desastres naturais, exibindo mapas dinâmicos, dados reais, previsão do tempo em tempo real e alertas de possíveis desastres naturais.",
+        imageurl: '/projects/rain.png',
+        role: "Desenvolvedor FullStack & Design UI/UX",
+        technologies: "React, Tailwind CSS, TypeScript, API, NestJS, Prisma ORM, PostgreSQL, Netlify",
+        deploy: "https://rain-weather-forecast.netlify.app/"
+    },
+    {
         name: "IEP/UFPI",
         description: "O Instituto de Economia Política (IEP) da Universidade Federal do Piauí (UFPI), surgiu no ano de 2025 a partir da necessidade de ampliação das atividades debates no ceio do Grupo de Análise de Economia Política (GAEP) (UFPI) (fundado em maio de 2024), em função de promover as publicidades dos debates e pesquisas do Grupo e incorporar as atividades inseridas no Programa da Pesquisas sobre o Nordeste (ProNordeste) (UFPI) (2025).",
         imageurl: '/projects/iep.png',
